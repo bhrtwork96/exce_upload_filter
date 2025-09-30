@@ -1,0 +1,146 @@
+/* style.css */
+:root {
+  --bg: #0e1117;
+  --card: #161b22;
+  --text: #e6edf3;
+  --muted: #9aa6b2;
+  --accent: #2f81f7;
+  --border: #2d333b;
+  --ok: #2ea043;
+  --bad: #f85149;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+h1, h2 {
+  font-size: 20px;
+  margin: 0 0 10px;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+input[type="file"], select, input[type="text"], button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #0b0f14;
+  color: var(--text);
+  font-size: 14px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+button {
+  background: var(--accent);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.row > * {
+  flex: 1;
+  min-width: 140px;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+th, td {
+  border-bottom: 1px solid var(--border);
+  padding: 8px;
+  text-align: left;
+  white-space: nowrap;
+}
+th {
+  position: sticky;
+  top: 0;
+  background: #0b0f14;
+  color: var(--muted);
+  z-index: 1;
+}
+
+.pill {
+  display: inline-block;
+  background: #0b0f14;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+.status {
+  font-size: 12px;
+  margin-top: 6px;
+}
+.status.ok { color: var(--ok); }
+.status.bad { color: var(--bad); }
+
+.footer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 12px;
+  margin: 12px 0;
+}
+
+#filters .row {
+  margin-bottom: 6px;
+}
+#filters select, #filters input {
+  flex: 1;
+}
+#filters button {
+  flex: 0 0 auto;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  h1, h2 { font-size: 18px; }
+  input, select, button { font-size: 13px; }
+  .row { flex-direction: column; }
+}

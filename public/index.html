@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Excel Upload & Filter (Mobile)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="desktop-block">
+        This app is designed for mobile only. Please open on a phone or reduce your browser width below 600px.
+    </div>
+
+    <div class="mobile-only">
+        <div class="container">
+            <div class="card">
+                <h1>Excel upload</h1>
+                <label for="file">Select .xlsx or .xls</label>
+                <input type="file" id="file" accept=".xlsx,.xls" />
+                <div style="height:8px"></div>
+                <button id="uploadBtn">Upload & Save</button>
+                <div id="uploadStatus" class="status"></div>
+            </div>
+
+            <div class="card">
+                <h2>Datasets</h2>
+                <label for="dataset">Select dataset</label>
+                <select id="dataset"></select>
+                <div class="row" style="margin-top:8px">
+                    <button id="loadBtn">Load data</button>
+                    <button id="deleteBtn" style="background:#f85149">Delete dataset</button>
+                </div>
+                <div id="datasetInfo" class="status"></div>
+            </div>
+            <div class="card">
+                <h2>Filters</h2>
+                <div id="filters"></div>
+                <div style="margin-top:8px" class="row">
+                    <button id="addFilter">+ Add Filter</button>
+                    <button id="applyFilters">Apply Filters</button>
+                    <button id="clearFilters" style="background:#6a6f7a">Clear</button>
+                </div>
+                <div id="filterInfo" class="status"></div>
+            </div>
+
+
+            <div class="card">
+                <h2>Data</h2>
+                <div class="pill" id="countPill">Rows: 0</div>
+                <div style="height:8px"></div>
+                <div class="table-wrap">
+                    <table id="dataTable">
+                        <thead></thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="footer">Powoer by Bharar Kumar Mali</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
